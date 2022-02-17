@@ -16,8 +16,10 @@
   },
   "dependencies": {
     "gatsby": "^4.4.0",
+    "gatsby-plugin-sass": "^5.7.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-icons": "^4.3.1"
+    "react-icons": "^4.3.1",
+    "sass": "^1.49.7"
   }
 }
