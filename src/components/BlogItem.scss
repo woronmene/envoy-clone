@@ -1,0 +1,26 @@
+@import "../Styles/mixins";
+@import "../Styles/functions";
+@import "../Styles/variables";
+
+.blogItem {
+  img {
+    width: 100%;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+  }
+
+  .blogItem-title {
+    line-height: 1.8rem;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+  }
+
+  &:hover > .blogItem-title {
+    color: $orange;
+  }
+  &:hover > img {
+    box-shadow: -4px 9px 15px -1px rgba(186, 172, 172, 0.75);
+    -webkit-box-shadow: -4px 9px 15px -1px rgba(186, 172, 172, 0.75);
+    -moz-box-shadow: -4px 9px 15px -1px rgba(186, 172, 172, 0.75);
+  }
+}

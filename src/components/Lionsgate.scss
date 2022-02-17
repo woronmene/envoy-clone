@@ -1,0 +1,72 @@
+@import "../Styles/mixins";
+@import "../Styles/functions";
+@import "../Styles/variables";
+
+.lionsgate {
+  width: 100%;
+  height: 70vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  //   border: 3px solid black;
+  clip-path: ellipse(230% 100% at 50% 100%);
+
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/peggs-web.appspot.com/o/office-bg.jpg?alt=media&token=66927353-be19-4c3d-8425-4733e0707063");
+  background-blend-mode: Pass through;
+  background-position: center;
+  background-size: cover;
+
+  //   &::before {
+  //     content: "";
+  //     position: absolute;
+  //     height: 100px;
+  //     bottom: -90px;
+  //     right: 0;
+  //     left: 0;
+  //     background-color: white;
+  //     clip-path: ellipse(138% 100% at 50% 100%);
+  //   }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(79, 80, 150, 0.8);
+    clip-path: ellipse(230% 100% at 50% 100%);
+
+    // mix-blend-mode: overlay;
+  }
+
+  .lionsgate-text {
+    position: relative;
+    color: white;
+    text-align: center;
+    width: 70%;
+    margin-bottom: 40px;
+
+    @include mdMaxBreakPoint {
+      width: 95%;
+    }
+  }
+
+  .play-btn {
+    position: relative;
+    height: 85px;
+    width: 85px;
+    border-radius: 35% 65% 55% 45% / 61% 42% 58% 39%;
+    // border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fa4338;
+    transition: 0.2s all ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@import "../Styles/mixins";
+@import "../Styles/functions";
+@import "../Styles/variables";
+
+.try {
+  width: 100%;
+  padding: 20px 10px;
+  // border: black 1px solid;
+
+  .try-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include lgMaxBreakPoint {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    button {
+      @include smMaxBreakPoint {
+        width: 100%;
+        margin-bottom: 10px;
+        // text-align: left;
+      }
+    }
+  }
+
+  .phone-icon {
+    display: inline;
+    // border: 2px solid red;
+    float: left;
+    margin-right: 10px;
+  }
+}

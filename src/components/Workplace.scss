@@ -1,0 +1,61 @@
+@import "../Styles/mixins";
+@import "../Styles/functions";
+@import "../Styles/variables";
+
+.workplace {
+  width: 100%;
+  //   height: 90vh;
+  padding: 20px 0;
+  //   border: 2px solid black;
+  display: flex;
+  align-items: center;
+  //   justify-content: center;
+
+  .workplace-wrapper {
+    height: auto;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    // grid-template: repeat(2, 40vh) / repeat(3, 1fr);
+    grid-auto-rows: 300px;
+    // border: 2px solid green;
+  }
+
+  .workplace-feature {
+    width: 70%;
+    // border: 1px solid black;
+    margin: auto;
+  }
+  .workplace-main-text {
+    margin: auto;
+
+    @include mdMaxBreakPoint {
+      width: 80%;
+    }
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+    // border: 2px solid red;
+
+    img {
+      margin-right: 20px;
+    }
+
+    .beta {
+      margin-left: 10px;
+      padding: 5px 15px;
+      border: 1px solid red;
+      border-radius: 15px;
+      font-size: toRem(11);
+    }
+  }
+
+  .learn-more {
+    font-weight: bold;
+    // border: 1px solid red;
+  }
+}

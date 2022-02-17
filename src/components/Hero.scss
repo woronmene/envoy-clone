@@ -1,0 +1,59 @@
+@import "../Styles/mixins";
+@import "../Styles/functions";
+@import "../Styles/variables";
+
+.hero {
+  width: 100%;
+  height: calc(100vh - 85px);
+  border-bottom: 15px solid $text-lighter-dark;
+
+  @include customMaxBreakPoint(320) {
+    height: auto;
+  }
+  //   border: 1px solid red;
+
+  .hero-content {
+    width: 40%;
+    margin-left: 50%;
+    padding-top: 6rem;
+    // margin-top: 6rem;
+
+    @include lgMaxBreakPoint {
+      width: 80%;
+      margin: 0 auto;
+      text-align: center;
+      padding-top: 3rem;
+    }
+    @include smMaxBreakPoint {
+      width: 90%;
+      text-align: left;
+    }
+
+    .hero-desc {
+      width: 80%;
+
+      //   border: 1px solid red;
+
+      @include lgMaxBreakPoint {
+        text-align: center;
+        margin: 20px auto;
+      }
+      @include smMaxBreakPoint {
+        width: 100%;
+        text-align: left;
+      }
+    }
+
+    button {
+      @include smMaxBreakPoint {
+        width: 100%;
+        margin-bottom: 10px;
+        // text-align: left;
+      }
+    }
+
+    .contact-text {
+      font-size: toRem(16);
+    }
+  }
+}

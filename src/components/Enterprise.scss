@@ -1,0 +1,42 @@
+@import "../Styles/mixins";
+@import "../Styles/functions";
+@import "../Styles/variables";
+
+.enterprise {
+  width: 100%;
+  height: 70vh;
+  //   border: 3px solid black;
+  background-color: #f6f6f9;
+  position: relative;
+  margin-bottom: 100px;
+
+  .enterprise-content {
+    width: 45%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // border: 1px solid red;
+    text-align: center;
+
+    @include mdMaxBreakPoint {
+      width: 70%;
+    }
+    @include smMaxBreakPoint {
+      width: 90%;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100px;
+    bottom: -90px;
+    right: 0;
+    left: 0;
+    background-color: white;
+    clip-path: ellipse(138% 100% at 50% 100%);
+  }
+}

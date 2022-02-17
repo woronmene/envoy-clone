@@ -1,0 +1,90 @@
+@import "../Styles/mixins";
+@import "../Styles/functions";
+@import "../Styles/variables";
+
+.technology {
+  width: 100%;
+  padding: 100px 20px;
+
+  .technology-top {
+    width: 45%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 100px;
+
+    @include xlMaxBreakPoint {
+      width: 60%;
+      // border: 3px solid black;
+    }
+    @include lgMaxBreakPoint {
+      width: 80%;
+    }
+    @include smMaxBreakPoint {
+      width: 100%;
+    }
+  }
+
+  .technology-buttons {
+    @include smMaxBreakPoint {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .white-btn {
+    background-color: $white;
+    padding: 12px 45px;
+    color: $orange;
+    box-shadow: 1px 3px 6px -1px rgba(186, 172, 172, 0.69);
+    -webkit-box-shadow: 1px 3px 6px -1px rgba(186, 172, 172, 0.69);
+    -moz-box-shadow: 1px 3px 6px -1px rgba(186, 172, 172, 0.69);
+    margin-left: 30px;
+
+    @include smMaxBreakPoint {
+      // width: 100%;
+      margin-left: 0;
+      margin-top: 30px;
+    }
+  }
+
+  .technology-bottom {
+    width: 100%;
+    // border: 1px solid red;
+    // grid-template-columns: repeat(4, 1fr);
+    // grid-template-rows: repeat(2, 1fr);
+    
+    // grid-template: repeat(2, 40vh) / repeat(3, 1fr);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: 300px;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+  }
+
+  .technology-card {
+    width: 280px;
+    height: 220px;
+    // border: 1px solid red;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: $white;
+    border-radius: 5px;
+    margin: 10px auto;
+    box-shadow: 1px 3px 6px -1px rgba(186, 172, 172, 0.69);
+    cursor: pointer;
+
+    @include mdMaxBreakPoint {
+      width: 80%;
+    }
+
+    svg {
+      width: 40px;
+      margin-bottom: 20px;
+    }
+  }
+}

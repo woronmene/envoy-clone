@@ -1,0 +1,36 @@
+@import "../Styles/mixins";
+@import "../Styles/functions";
+@import "../Styles/variables";
+
+.blog {
+  width: 100%;
+  height: auto;
+  padding: 100px 20px;
+
+  .blog-subheading {
+    font-weight: bold;
+    font-size: toRem(14);
+    letter-spacing: toRem(2);
+  }
+
+  .blog-title {
+    width: 50%;
+    margin: 20px 0;
+    @include mdMaxBreakPoint {
+      width: 70%;
+    }
+  }
+
+  .featured-blogs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+
+    @include lgMaxBreakPoint {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include mdMaxBreakPoint {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
