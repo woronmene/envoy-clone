@@ -3,5 +3,5 @@ module.exports = {
     siteUrl: "https://www.yourdomain.tld",
     title: "envoy",
   },
-  plugins: [`gatsby-plugin-sass`],
+  plugins: ["gatsby-plugin-sass"],
 };
